@@ -31,8 +31,8 @@ def lalala(message):
             i = 0
             for j in auditories[str(1)]:
                 if auditories[str(1)][j] == 0 and i < 10:
-                    bot.send_message(message.chat.id, str(j))
-                	i += 1
+                        bot.send_message(message.chat.id, str(j))
+                        i += 1
             if i == 0 :
                     bot.send_message(message.chat.id, "Свободных аудиторий нет ")
         elif message.text == 'Св. аудит. 2k 🎯':
@@ -40,37 +40,37 @@ def lalala(message):
             i = 0
             for j in auditories[str(2)]:
                 if auditories[str(2)][j] == 0 and i < 10:
-                    bot.send_message(message.chat.id, str(j))
-                	i += 1
+                        bot.send_message(message.chat.id, str(j))
+                        i += 1
             if i == 0 :
-                    bot.send_message(message.chat.id, "Свободных аудиторий нет ")
+                    bot.send_message(message.chat.id, "Свободных аудиторий нет ")    
         elif message.text == 'Св. аудит. 3k 🎯':
             auditories = config.search_empty_auditory()
             i = 0
             for j in auditories[str(3)]:
                 if auditories[str(3)][j] == 0 and i < 10:
-                    bot.send_message(message.chat.id, str(j))
-                	i += 1
+                        bot.send_message(message.chat.id, str(j))
+                        i += 1
             if i == 0 :
-                    bot.send_message(message.chat.id, "Свободных аудиторий нет ")
+                    bot.send_message(message.chat.id, "Свободных аудиторий нет ")    
         elif message.text == 'Св. аудит. 4k 🎯':
             auditories = config.search_empty_auditory()
             i = 0
             for j in auditories[str(4)]:
                 if auditories[str(4)][j] == 0 and i < 10:
-                    bot.send_message(message.chat.id, str(j))
-                	i += 1
+                        bot.send_message(message.chat.id, str(j))
+                        i += 1
             if i == 0 :
-                    bot.send_message(message.chat.id, "Свободных аудиторий нет ")
+                    bot.send_message(message.chat.id, "Свободных аудиторий нет ")    
         elif message.text == 'Св. аудит. 5k 🎯':
             auditories = config.search_empty_auditory()
             i = 0
             for j in auditories[str(5)]:
                 if auditories[str(5)][j] == 0 and i < 10:
-                    bot.send_message(message.chat.id, str(j))
-                	i += 1
+                        bot.send_message(message.chat.id, str(j))
+                        i += 1
             if i == 0 :
-                    bot.send_message(message.chat.id, "Свободных аудиторий нет ")
+                    bot.send_message(message.chat.id, "Свободных аудиторий нет ")    
         else:
         	bot.send_message(message.chat.id, 'Я не знаю что ответить 😢')
 @bot.callback_query_handler(func=lambda call: True)
