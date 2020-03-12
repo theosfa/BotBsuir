@@ -28,11 +28,18 @@ def lalala(message):
     if message.chat.type == 'private':
         if message.text == 'Св. аудит. 1k 🎯':
             auditories = config.search_empty_auditory()
-            i = 1
+            i = 0
+			a = []
             for j in auditories[str(1)]:
-                if auditories[str(1)][j] == 0 and i < 11:
-                    bot.send_message(message.chat.id, str(j))
-                i += 1
+                if auditories[str(1)][j] == 0:
+					a.append(str(j))
+					i += 1
+			if i == 0:
+				bot.send_message(message.chat.id, "Сори но в 1k свободных аудиторий нет 😢")
+			else:
+				for k in a:
+					bot.send_message(message.chat.id, a[random.randint(0,i)])
+
         if message.text == 'Св. аудит. 2k 🎯':
             auditories = config.search_empty_auditory()
             i = 1

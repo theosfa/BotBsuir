@@ -76,6 +76,3 @@ def print_empty(building, auditories):
     for j in auditories[str(building)]:
         if auditories[str(building)][j] == 1:
             print(j)
-
-aud = search_empty_auditory()
-print_empty(1, aud)
