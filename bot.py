@@ -29,48 +29,40 @@ def lalala(message):
         if message.text == 'Св. аудит. 1k 🎯':
             auditories = config.search_empty_auditory()
             i = 0
-			a = []
             for j in auditories[str(1)]:
-                if auditories[str(1)][j] == 0:
-					a.append(str(j))
-					i += 1
-			if i == 0:
-				bot.send_message(message.chat.id, "Сори но в 1k свободных аудиторий нет 😢")
-			else:
-				for k in a:
-					bot.send_message(message.chat.id, a[random.randint(0,i)])
-
-        if message.text == 'Св. аудит. 2k 🎯':
+                if auditories[str(1)][j] == 0 and i < 10:
+                    bot.send_message(message.chat.id, str(j))
+                i += 1
+        elif message.text == 'Св. аудит. 2k 🎯':
             auditories = config.search_empty_auditory()
             i = 1
             for j in auditories[str(2)]:
                 if auditories[str(2)][j] == 0 and i < 11:
                     bot.send_message(message.chat.id, str(j))
                 i += 1
-        if message.text == 'Св. аудит. 3k 🎯':
+        elif message.text == 'Св. аудит. 3k 🎯':
             auditories = config.search_empty_auditory()
             i = 1
             for j in auditories[str(3)]:
                 if auditories[str(3)][j] == 0 and i < 11:
                     bot.send_message(message.chat.id, str(j))
                 i += 1
-        if message.text == 'Св. аудит. 4k 🎯':
+        elif message.text == 'Св. аудит. 4k 🎯':
             auditories = config.search_empty_auditory()
             i = 1
             for j in auditories[str(4)]:
                 if auditories[str(4)][j] == 0 and i < 11:
                     bot.send_message(message.chat.id, str(j))
                 i += 1
-        if message.text == 'Св. аудит. 5k 🎯':
+        elif message.text == 'Св. аудит. 5k 🎯':
             auditories = config.search_empty_auditory()
             i = 1
             for j in auditories[str(5)]:
                 if auditories[str(5)][j] == 0 and i < 11:
                     bot.send_message(message.chat.id, str(j))
                 i += 1
-        # else:
-        # 	bot.send_message(message.chat.id, 'Я не знаю что ещё написать 😢')
-
+        else:
+        	bot.send_message(message.chat.id, 'Я не знаю что ответить 😢')
 @bot.callback_query_handler(func=lambda call: True)
 def callback_inline(call):
 	try:
